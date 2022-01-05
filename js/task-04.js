@@ -1,13 +1,21 @@
-const counterValue = document.querySelector('#value').textContent;
-
-console.log(counterValue)
+let result = document.querySelector('#value');
 
 const increaseValueBtn = document.querySelector('[data-action="increment"]');
-console.log(increaseValueBtn)
 
+const decreaseValueBtn = document.querySelector('[data-action="decrement"]');
 
+let counterValue = 0;
 
+const addValueFn = () => {
+    result.textContent = counterValue += 1;
+}
 
+const decreaseValueFn = () => {
+    result.textContent = counterValue -= 1;;
+}
+increaseValueBtn.addEventListener('click' , addValueFn);
+
+decreaseValueBtn.addEventListener('click' , decreaseValueFn);
 
 
  // Создай переменную counterValue в которой будет храниться текущее значение счетчика и 
