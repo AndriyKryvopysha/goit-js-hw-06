@@ -9,14 +9,14 @@ const ingredients = [
 
 const vegetablesList = document.querySelector('#ingredients');
 
-ingredients.forEach(vegetable => {
+const listOfIngredients = ingredients.map((vegetable) => {
   const newItem = document.createElement("li");
   newItem.textContent = vegetable;
   newItem.classList.add('item');
-  vegetablesList.append(newItem);
-  })
+  return newItem;
+});
 
-
+vegetablesList.append(...listOfIngredients);
 
 // Напиши скрипт, который для каждого элемента массива ingredients:
 
