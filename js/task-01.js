@@ -7,7 +7,7 @@ console.log(`Number of categories: ${numbersOfCategory}`)
 
 // 2 //
 
-const allTitles = categoriesWithClass.forEach((el) => {
+categoriesList.forEach((el) => {
     console.log(`Category: ${el.firstElementChild.textContent}`);
     console.log(el.lastElementChild.children.length);
 })
