@@ -1,15 +1,15 @@
 // 1 //
-const categoriesWithClass = document.querySelectorAll('.item');
+const categoriesList = document.querySelectorAll('.item');
 
-const numbersOfCategory = categoriesWithClass.length;
+const numbersOfCategory = categoriesList.length;
 
 console.log(`Number of categories: ${numbersOfCategory}`)
 
 // 2 //
 
-const allTitles = categoriesWithClass.forEach((titel) => {
-    console.log(`Category: ${titel.firstElementChild.textContent}`);
-    console.log(titel.querySelector('ul').children.length);
+const allTitles = categoriesWithClass.forEach((el) => {
+    console.log(`Category: ${el.firstElementChild.textContent}`);
+    console.log(el.lastElementChild.children.length);
 })
     
 
