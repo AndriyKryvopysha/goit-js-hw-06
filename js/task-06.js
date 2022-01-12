@@ -4,14 +4,14 @@ const minSymbols = textField.dataset.length;
 
 const checkFn = event => {
     event.preventDefault();
-    if (event.currentTarget.value.length >= minSymbols) {
+    if (event.currentTarget.value.length == minSymbols) {
         if (textField.classList.contains('invalid')) {
             textField.classList.remove('invalid');
         }
         textField.classList.add('valid');
     }
 
-    if (event.currentTarget.value.length < minSymbols) {
+    if (event.currentTarget.value.length != minSymbols) {
         if (textField.classList.contains('valid')) {
             textField.classList.remove('valid');
         }
