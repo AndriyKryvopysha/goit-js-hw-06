@@ -15,10 +15,10 @@ const images = [
 
 const refreshedGall = document.querySelector('.gallery');
 
-const insert = images
+const imagesList = images
   .map((image) =>`<li><img src=${image.url} alt=${image.alt} width="350"></li>`).join("");
 
-refreshedGall.insertAdjacentHTML("beforeend", insert);
+refreshedGall.insertAdjacentHTML("beforeend", imagesList);
   
 
 
